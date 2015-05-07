@@ -48,4 +48,9 @@ public class RomanToNumberConverterTest {
 	public void shouldGet1001(){
 		assertEquals(Integer.valueOf(1001), romanToNumberConverter.convert("MI"));
 	}
+	
+	@Test
+	public void shouldGet1999(){
+		assertEquals(Integer.valueOf(1999), romanToNumberConverter.convert("MCMXCIX"));
+	}
 }

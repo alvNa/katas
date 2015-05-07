@@ -9,20 +9,20 @@ public class NumberToRomanConverter {
 		String result = "";
 		int length = (int) (Math.log10(num) + 1);
 
-		for (int idx = length - 1; idx >= 0; idx--) {
+		for (int idx = 0; idx < length; idx++) {
 
 			switch (idx) {
 			case 0:
-				result += convertUnits(num % 10);
+				result = convertUnits(num % 10) + result;
 				break;
 			case 1:
-				result += convertTens((num / 10) % 10);
+				result = convertTens((num / 10) % 10) + result;
 				break;
 			case 2:
-				result += convertCents((num / 100) % 10);
+				result = convertCents((num / 100) % 10) + result;
 				break;
 			case 3:
-				result += convertMills((num / 1000) % 10);
+				result = convertMills((num / 1000) % 10) + result;
 				break;
 			}
 		}

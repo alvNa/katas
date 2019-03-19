@@ -14,9 +14,10 @@
 		</developer>
 	</developers>
 
-	 <modules>
-    <module>fizz-buzz</module>
-    <module>roman-numerals</module>
-    <module>string-calculator</module>
-  </modules>
+	<modules>
+    	<module>fizz-buzz</module>
+    	<module>roman-numerals</module>
+    	<module>string-calculator</module>
+		<module>dictionary-replacer</module>
+	</modules>
 </project>

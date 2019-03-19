@@ -4,7 +4,6 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 
-import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -21,23 +20,10 @@ public class DiscountStepdefs {
 
     private ShoppingCart cart = new ShoppingCart();
 
- /*   @Given("^I request the (\\w+) Most Watched Feed for (\\w+)$")
-    public void I_request_the_type_Most_Watched_Feed_for_platform(String type, String platform) throws Throwable {
-
-    }
-
-    ;
-
-    @Given("Alice has installed maven")
-    public void alice_has_installed_maven() {
-        // Write code here that turns the phrase above into concrete actions
-    }*/
-
     @When("^I buy (\\d+) cop(?:y|ies) of \"([^\"]*)\"$")
     public void I_buy_copy_of(int numCopies, String title) throws Throwable {
-        //cart.getClearBooks();
         Book book = bookByTitle(title).orElseThrow(() -> new UnknownTitle(title));
-        //IntStream.range(0, numCopies).forEach(n-> cart.addBook(book));
+
         if (numCopies>0)
             cart.addBook(book,numCopies);
     }

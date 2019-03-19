@@ -3,7 +3,6 @@ package com.katas;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.math.BigDecimal;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,7 +31,7 @@ public class BookPriceTest {
     @Test
     public void shouldCalculateTotalWhenEmptyCart() throws Exception {
         ShoppingCart cart = new ShoppingCart(Map.of());
-        assertEquals(cart.calculateTotal(), BigDecimal.ZERO);
+        assertEquals(cart.calculateTotal(), 0);
     }
 
     @Test
@@ -72,7 +71,7 @@ public class BookPriceTest {
         Map<Book,Integer> orders = Map.of(hp1,1*2);
 
         ShoppingCart cart = new ShoppingCart(orders);
-        assertEquals(cart.calculateTotal(), new BigDecimal(8*2));
+        assertEquals(cart.calculateTotal(), 8*2);
     }
 
     @Test
@@ -80,7 +79,7 @@ public class BookPriceTest {
         Map<Book,Integer> orders = Map.of(hp2,1*3);
 
         ShoppingCart cart = new ShoppingCart(orders);
-        assertEquals(cart.calculateTotal(), new BigDecimal(8*3));
+        assertEquals(cart.calculateTotal(), 8*3);
     }
 
     /**
@@ -97,6 +96,6 @@ public class BookPriceTest {
         Map<Book,Integer> orders = Map.of(hp1,1,hp2,1);
 
         ShoppingCart cart = new ShoppingCart(orders);
-        assertEquals(cart.calculateTotal(), new BigDecimal(8*2));
+        assertEquals(cart.calculateTotal(), 8*2);
     }
 }

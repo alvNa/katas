@@ -9,26 +9,11 @@ import java.math.BigDecimal;
 public class Book {
 
     private String title;
-    private BookVolume vol;
     private Double price;
-
-    public Book(String title, BookVolume vol, Double price){
-        this.title = title;
-        this.vol = vol;
-        this.price = price;
-    }
 
     public Book(String title, Double price){
         this.title = title;
         this.price = price;
-    }
-
-    public BookVolume getVol() {
-        return vol;
-    }
-
-    public void setVol(BookVolume vol) {
-        this.vol = vol;
     }
 
     public String getTitle() {
@@ -52,7 +37,7 @@ public class Book {
         boolean res = false;
 
         if (obj!=null && obj instanceof Book){
-            res = this.title == ((Book) obj).getTitle() && this.vol == ((Book) obj).getVol();
+            res = this.title == ((Book) obj).getTitle();
         }
 
         return res;

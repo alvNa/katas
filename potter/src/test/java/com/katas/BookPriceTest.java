@@ -4,7 +4,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
-import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -23,11 +22,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  */
 @DisplayName("Dictionary replacer tests")
 public class BookPriceTest {
-    private Book hp1 = new Book("Harry Potter",BookVolume.I, 8D);
-    private Book hp2 = new Book("Harry Potter",BookVolume.I, 8D);
-    private Book hp3 = new Book("Harry Potter",BookVolume.I, 8D);
-    private Book hp4 = new Book("Harry Potter",BookVolume.I, 8D);
-    private Book hp5 = new Book("Harry Potter",BookVolume.I, 8D);
+    private Book hp1 = new Book("Harry Potter", 8D);
+    private Book hp2 = new Book("Harry Potter", 8D);
+    private Book hp3 = new Book("Harry Potter", 8D);
+    private Book hp4 = new Book("Harry Potter", 8D);
+    private Book hp5 = new Book("Harry Potter", 8D);
 
 
     @Test

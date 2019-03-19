@@ -28,7 +28,6 @@ public class DiscountStepdefs {
             cart.addBook(book,numCopies);
     }
 
-
     @Then("^I must pay \\$(\\d+.?\\d*)$")
     public void I_must_pay_$(Double amount) throws Throwable {
         Double expected = amount;

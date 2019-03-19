@@ -96,6 +96,23 @@ public class BookPriceTest {
         Map<Book,Integer> orders = Map.of(hp1,1,hp2,1);
 
         ShoppingCart cart = new ShoppingCart(orders);
-        assertEquals(cart.calculateTotal(), 8*2);
+        assertEquals(cart.calculateTotalWithDiscounts(), 15.2);
+    }
+
+    /**
+    def testSeveralDiscounts
+    assert_equal(8 + (8 * 2 * 0.95), price([0, 0, 1]))
+    assert_equal(2 * (8 * 2 * 0.95), price([0, 0, 1, 1]))
+    assert_equal((8 * 4 * 0.8) + (8 * 2 * 0.95), price([0, 0, 1, 2, 2, 3]))
+    assert_equal(8 + (8 * 5 * 0.75), price([0, 1, 1, 2, 3, 4]))
+    end
+     */
+
+    @Test
+    public void shouldCalculateWithDiscount2() throws Exception {
+        Map<Book,Integer> orders = Map.of(hp1,2,hp2,1);
+
+        ShoppingCart cart = new ShoppingCart(orders);
+        assertEquals(cart.calculateTotalWithDiscounts(), 8*2 - (8* 0.05d) + 8);
     }
 }
